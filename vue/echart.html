@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+   <head>
+       <meta charset="utf-8">
+   </head>
+   <body>
+        <div class="wrap" style="height: 300px;width: 400px; margin: 100px auto">
+            <div id="container" style="height: 100%"></div>
+        </div>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/echarts.min.js"></script>
+       <!-- <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-gl/echarts-gl.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts-stat/ecStat.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/dataTool.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/china.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/map/js/world.js"></script>
+       <script type="text/javascript" src="https://api.map.baidu.com/api?v=2.0&ak=xfhhaTThl11qYVrqLZii6w8qE5ggnhrY&__ec_v__=20190126"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/echarts/extension/bmap.min.js"></script>
+       <script type="text/javascript" src="http://echarts.baidu.com/gallery/vendors/simplex.js"></script> -->
+       <script type="text/javascript">
+            var dom = document.getElementById("container");
+            var myChart = echarts.init(dom);
+            option = null;
+            var option = {
+                tooltip: {
+                    trigger: 'axis',
+                },
+                xAxis: {
+                    type: 'category',
+                    boundaryGap: false,
+                    data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    axisLine:{
+                        lineStyle:{
+                            color: '#317ee7',
+                            width: 2
+                        }
+                    },
+                    axisLabel:{
+                        textStyle:{
+                            color:'#333333'
+                        }
+                    }
+                },
+                grid: {
+                    top: '3%',
+                    left: '3%',
+                    right: '5%',
+                    bottom: '12%',
+                    containLabel: true
+                },
+                yAxis: {
+                    type: 'value',
+                    min: 0,
+                    max: 2000,
+                     axisLine:{
+                        lineStyle:{
+                            color: '#317ee7',
+                            width: 2
+                        }
+                    },
+                    axisLabel:{
+                        textStyle:{
+                            color:'#333333'
+                        }
+                    }
+                },
+                series: [{
+                    data: [200, 532, 901, 599, 1290, 1030, 1200],
+                    type: 'line',
+                    itemStyle: {
+                        // 点的颜色。
+                        color: '#ff7e4f',
+                    },
+                    symbol: 'circle',
+                    symbolSize: 6,
+                }]
+            };
+            if (option && typeof option === "object") {
+                myChart.setOption(option, true);
+            }
+       </script>
+   </body>
+</html>

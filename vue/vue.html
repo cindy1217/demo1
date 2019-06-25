@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>vue实例</title>
+	<style type="text/css">
+		#app{
+			width: 1200px;
+			margin: 0 auto;
+		}
+		.itembox{
+			width: 600px;
+			float: left;
+			margin: 10px auto;
+		}
+		.active{
+			background: #a10;
+		}
+	</style>
+</head>
+<body>
+	<div id="app">
+		<h1>Vue练习作业</h1>
+		<div class="itembox">
+			<h2>基础V-for指令</h2>
+			<ul v-for="item in listData" :key="item.index">
+				<li>
+					<input type="text" v-model="item.name">
+					<span>你的名字是：{{item.name}}  </span>
+					<span>你的出生地：{{item.adress}}</span>
+				</li>
+			</ul>
+			<ul v-for="food in foodList">
+				<li>{{food.name+food.color}}</li>
+			</ul>	
+		</div>
+		<div class="itembox">
+			<h2>V-bind指令</h2>
+			<a :class="{active: isActive}" v-bind:href="url">
+				点我
+				<!-- <img v-bind:src="img"> -->
+			</a>
+			<a v-bind:class="klass">h哈哈哈哈</a>
+		</div>
+		<div class="itembox">
+			<h2>V-on指令 v-on:替换@</h2>
+			<button v-on="{mouseenter: onEnter,mouseleave: onOut}" v-on:click="onClick">点点我</button>
+			<form @keyup="onKeyup" @submit.prevent="onSubmit">
+				<input type="text" name="">
+				<button type="submit">提交</button>
+			</form>
+		</div>
+		<div class="itembox">
+			<h2>V-model指令及其修饰符 <span>input,select,:name 可以用v-model替代</span></h2>
+			<input type="text" v-model.number="price">
+			<pre>{{price}}</pre>
+			<label>
+				男
+				<input v-model="sex" value="male" type="radio">
+			</label>
+			<label>
+				女
+				<input v-model="sex" value="female" type="radio" >
+			</label>
+			<br>
+			{{sex}}
+			<div>你来自哪里</div>
+			<div>
+				<select v-model="from">
+					<option value="1">地球</option>
+					<option value="2">星球</option>
+					<option value="3">银河</option>
+				</select>
+				<br>
+			{{from}}
+			</div>
+			<select v-model="dest" multiple>
+				<option value="1">草原上</option>
+				<option value="2">大山上</option>
+				<option value="3">海边</option>
+				<option value="4">城市</option>
+			</select>
+			{{dest}}
+		</div>
+		<div class="itembox">
+			<h2>控制流</h2>
+			<div v-if="role == 'admin' || role=='super_admin'">
+				管理员你好
+			</div>
+			<div v-else-if="role == 'hr'">
+				待查看简历列表
+			</div>
+			<div v-else>
+				您没有权限访问此页面
+			</div>
+		</div>
+		<div class="itembox">
+			<h2>组件全局及局部组件</h2>
+		</div>
+	</div>
+	<div id="pc">
+		<alert msg="哼哼哼哼哼">cccf</alert>
+		<user username="taobao0000"></user>
+		<popup></popup>
+		<tooltip></tooltip>
+	</div>
+	<script type="text/javascript" src="lib/vue.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		function myfunction(){
+			alert("hhhh")
+		}
+		var pc = document.getElementById('pc');
+		pc.onclick(){
+			myfunction()
+		}
+	</script>
+</body>
+</html>

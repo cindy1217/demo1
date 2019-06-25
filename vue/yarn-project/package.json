@@ -1,0 +1,10 @@
+{
+  "name": "yarn-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "tty-browserify": "^0.0.0",
+    "webpack": "^4.16.5"
+  }
+}

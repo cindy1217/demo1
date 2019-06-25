@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>哈哈哈</title>
+	<script type="text/javascript" src="lib/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<div>
+			{{number}}
+		</div>
+		<h2 id="aaa">哈哈哈哈</h2>
+		<ul v-for="item in listData">
+			<li>{{item.name}}{{item.age}}</li>
+		</ul>
+		<ul v-for="index in homeData">
+			<li>{{index.adress}}{{index.phone}}</li>
+		</ul>
+	</div>
+	<script>
+		document.write('<h1>电话费的</h1>');
+		var x = document.getElementById("aaa").innerHTML="哈哈哈";
+		var app = new Vue({
+			el:'#app',
+			data:{
+				number:123444,
+				seen: true,
+				listData:[
+				 {name:'hhh',age:12},
+				 {name:'www',age:22}
+				],
+				homeData:[
+				{adress:'上海',phone:'999999'}
+				]
+			}
+		})
+		
+	</script>
+</body>
+</html>
