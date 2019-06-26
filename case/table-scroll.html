@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<htm>
+<head>
+	<meta charset="utf-8">
+	<title>table切换</title>
+	<link rel="stylesheet" type="text/css" href="css/base.css">
+	<link rel="stylesheet" type="text/css" href="css/swiper.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+</head>
+<body>
+	<header>鲜艳的颜色 如同青春的色彩</header>
+	<div class="wrap clearfix">
+		<div class="fl">
+			<div class="table">
+				<div class="nav">
+					<ul>
+						<li class="on">首页</li><li>资讯</li><li>新闻</li><li>列表</li>
+					</ul>
+				</div>
+				<div class="table-hd">
+					<ul>
+						<li class="pink"></li>
+						<li class="yellow none"></li>
+						<li class="green none"></li>
+						<li class="orange none"></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="fr">
+			
+		</div>
+	</div>	
+</body>
+</html>
+<script type="text/javascript">
+	$('.nav li').hover(function(){
+		_this = $(this);
+		_this.addClass('on').siblings().removeClass('on');
+		$('.table-hd li').eq(_this.index()).show().siblings().hide()
+	})
+</script>
