@@ -1,3 +1,15 @@
+.pink{
+	background: pink;
+}
+.yellow{
+	background: yellow;
+}
+.green{
+	background: green;
+}
+.orange{
+	background: orange;
+}
 header{
 	height: 60px;
 	line-height: 60px;
@@ -5,6 +17,9 @@ header{
 	color: #fff;
 	font-size: 18px;
 	text-align: center;
+}
+.fr{
+	width: 300px;
 }
 .fl{
 	width: 890px;
@@ -31,17 +46,36 @@ header{
 			width: 890px;
 			height: 300px;
 		}
-		.pink{
-			background: pink;
-		}
-		.yellow{
-			background: yellow;
-		}
-		.green{
-			background: green;
-		}
-		.orange{
-			background: orange;
-		}
 	}
-}	
+}
+.loading_box{
+	.box{
+		position: fixed;
+		left: 0;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0,0,88,0.5);
+	}
+	img{
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+		width: 20px;
+		height: 20px;
+		z-index: -1;
+	}
+}
+.scroll-item{
+	width: 300px;
+	.pink{
+		height: 200px;
+		margin-bottom: 10px;
+	}
+	.orange{
+		height: 200px;
+	}
+}
