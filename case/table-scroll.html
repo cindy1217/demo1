@@ -6,10 +6,10 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	<script type="text/javascript" src="js/jquery-1.11.1.js"></script>
+	
 </head>
 <body>
-	<header><a id="scroll-top">鲜艳的颜色 如同青春的色彩</a></header>
+	<header id="scroll-top"><a>鲜艳的颜色 如同青春的色彩</a></header>
 	<div class="wrap clearfix">
 		<div class="fl" style="height: 1800px">
 			<div class="table">
@@ -27,65 +27,16 @@
 					</ul>
 				</div>
 			</div>
-			<a  name="scroll-top" style="margin-top: 1200px;display: block;" href="#scroll-top">回到顶部</a>
 		</div>
 		<div class="fr">
-			<div class="scroll-item"><div class="pink"></div><div class="orange"></div></div>
+			<div style="height: 700px; background: green">
+				
+			</div>
+			<div class="scroll-item"><div class="pink">我是悬浮广告位</div><div class="orange"></div></div>
 		</div>
-	</div>	
+	</div>
+	<a class="go-top" href="#"><img src="images/scroll-top.jpg"></a>	
 </body>
 </html>
-<script type="text/javascript">
-	//table切换
-	$('.nav li').hover(function(){
-		_this=$(this);
-		_this.addClass('on').siblings().removeClass('on');
-		$('.table-hd li').eq(_this.index()).show().siblings().hide()
-	})
-	//加载进度计时器
-	$(function(){
-		var loading ='<div class="loading_box"><div class="box"></div><img src="images/loading.gif"></div>' ;
-		$('body').append(loading)
-		setInterval(function(){
-			$('.loading_box').fadeOut()
-		},3000)
-	})
-	//左侧滚动悬浮定位
-	function showAdv(){
-		var decounce = null;
-		var setTop = document.getElementsByClassName('scroll-item')[0].offsetTop
-		window.onscroll=function(){
-			var t = document.documentElement.scrollTop||document.body.scrollTop
-			if (decounce) {
-				clearTimeout(decounce)
-			}
-			decounce = setTimeout(function(){
-				if( t > setTop){
-					$('.scroll-item').css({"position":"fixed",top:0})
-				}else{
-					$('.scroll-item').css("position","relative")
-				}
-			},10)
-		}
-	}
-	showAdv()
-	 // function showFixedSearch() {
-  //       var debounce = null;
-  //       var setTop= document.getElementsByClassName('scroll-item')[0].offsetTop
-  //       window.onscroll= function(){
-  //           var t = document.documentElement.scrollTop||document.body.scrollTop;
-  //           if(debounce){
-  //               clearTimeout(debounce);
-  //           }
-  //           debounce = setTimeout(function(){
-  //               if( t > setTop) {
-  //                   $(".scroll-item").css({ position: "fixed", top: 0 })
-  //               }else {
-  //                   $(".scroll-item").css({ position: "relative" })
-  //               }
-                
-  //           },10) 
-  //       }    
-  //   }
-  //   showFixedSearch()
-</script>
+<script type="text/javascript" src="js/lib/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
