@@ -1,11 +1,11 @@
 	//加载进度计时器
-	$(function(){
-		var loading = '<div class="loading_box"><div class="box"></div><img src="images/loading.gif"></div>';
-		$('body').append(loading);
-		setTimeout(function(){
-			$('.loading_box').fadeOut()
-		},2000)
-	})
+	// $(function(){
+	// 	var loading = '<div class="loading_box"><div class="box"></div><img src="images/loading.gif"></div>';
+	// 	$('body').append(loading);
+	// 	setTimeout(function(){
+	// 		$('.loading_box').fadeOut()
+	// 	},2000)
+	// })
 	//table切换
 	$('.nav li').hover(function(){
 		_this=$(this);
@@ -16,11 +16,9 @@
 	function showAdv(){
 		var debounce = null;
 		var setTop = document.getElementsByClassName('scroll-item')[0].offsetTop
-		console.log(setTop)
 		window.onscroll= function(){
 		//滚动条y轴到上的距离
 			var t = document.documentElement.scrollTop||document.body.scrollTop;
-			console.log(t)
 			if(debounce){
 				clearTimeout(debounce)
 			}

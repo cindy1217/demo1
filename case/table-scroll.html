@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="css/base.css">
 	<link rel="stylesheet" type="text/css" href="css/swiper.css">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
-	
+	<link rel="stylesheet" type="text/css" href="css/fonts.css">	
 </head>
 <body>
 	<header id="scroll-top"><a>鲜艳的颜色 如同青春的色彩</a></header>
@@ -27,11 +27,135 @@
 					</ul>
 				</div>
 			</div>
+			<!-- 发票 -->
+			<div class="tabcom">
+				<div class="e-invoice">
+					<div class="e-invoice-tit">
+						<p><input type="radio" checked="checked" id="e-invo" name="invoice"><label for="e-invo">自由行</label></p>
+						<span class="invoice-op">
+                            <a href="javascript:;" class="modify1">修改</a>
+                            <a href="javascript:;" class="type-more none" data-show="false">收起<i class="icon-arrow-up" ></i></a>
+                            <a href="javascript:;" class="type-more" data-show="true">展开<i class="icon-arrow-down" ></i></a>
+                        </span>
+					</div>
+					<div class="css-form invoice-view1">
+                        <ul class="form-list">
+                             <li class="clearfix">
+                                <label>出游人姓名</label>
+                                <div class="form-group">侯芳芳</div>
+                            </li>
+                            <li class="clearfix">
+                                <label>出游人邮箱</label>
+                                <div class="form-group">12345678</div>
+                            </li>
+                            <li class="clearfix">
+                                <label>出游人电话</label>
+                                <div class="form-group">15247893214</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="css-form invoice-modify1" style="display: block;">
+                        <form method="post" id="invoiceFormElectron">
+                            <ul class="form-list">
+                                <li>
+                                    <label><em>*</em>出游人姓名&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_name" class="error" value="" placeholder="请输入正确的发票抬头">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><em>*</em>出游人邮箱&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_realname" value="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><em>*</em>出游人手机&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_mobile" value="">
+                                    </div>
+                                </li>
+                                <li class="form-btn">
+                                    <span class="icon-22 error-tips">请输入出游人姓名</span>
+                                    <div class="form-text">
+                                        <div class="error" id="invoiceFormTips"></div>
+                                        <div class="success" id="invoiceSuccessTips"></div>
+                                        <div class="btn-wrap">
+                                            <input type="hidden" name="type" value="2">
+                                            <button type="button" class="btn-primary" id="invoiceBtn">保存信息</button>
+                                            <a href="javascript:void(0)" class="invoice-cancel">取消修改</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+				</div>
+				<div class="paper-invoice">
+                   <div class="e-invoice-tit">
+                        <p><input type="radio" id="p-invo" name="invoice"><label for="p-invo">跟团行</label></p>
+                        <span class="invoice-op">
+                            <a href="javascript:;" class="modify1">修改</a>
+                            <a href="javascript:;" class="type-more none" data-show="false">收起<i class="icon-arrow-up" ></i></a>
+                            <a href="javascript:;" class="type-more" data-show="true">展开<i class="icon-arrow-down" ></i></a>
+                        </span>
+                    </div> 
+                    <div class="css-form invoice-view1">
+                        <ul class="form-list">
+                            <li class="clearfix">
+                                <label>出游人姓名</label>
+                                <div class="form-group">侯芳芳</div>
+                            </li>
+                            <li class="clearfix">
+                                <label>出游人邮箱</label>
+                                <div class="form-group">12345678</div>
+                            </li>
+                            <li class="clearfix">
+                                <label>出游人电话</label>
+                                <div class="form-group">15247893214</div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="css-form invoice-modify1">
+                        <form method="post" id="invoiceForm">
+                            <ul class="form-list">
+                                <li>
+                                    <label><em>*</em>出游人姓名&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_name" class="" value="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><em>*</em>出游人邮箱&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_realname" value="">
+                                    </div>
+                                </li>
+                                <li>
+                                    <label><em>*</em>出游人电话&nbsp;</label>
+                                    <div class="form-group">
+                                        <input type="text" name="invoice_mobile" value="">
+                                    </div>
+                                </li>
+                                <li class="form-btn">
+                                     <span class="icon-tips tips error-tips">请输入出游人姓名</span>
+                                    <div class="form-text">
+                                        <div class="error" id="invoiceFormTips"></div>
+                                        <div class="success" id="invoiceSuccessTips"></div>
+                                        <div class="btn-wrap">
+                                            <input type="hidden" name="type" value="2">
+                                            <button type="button" class="btn-primary" id="invoiceBtn">保存信息</button>
+                                            <a href="javascript:void(0)" class="invoice-cancel">取消修改</a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                    </div>
+                </div>
+			</div>
 		</div>
 		<div class="fr">
-			<div style="height: 700px; background: green">
-				
-			</div>
 			<div class="scroll-item"><div class="pink">我是悬浮广告位</div><div class="orange"></div></div>
 		</div>
 	</div>
@@ -39,4 +163,4 @@
 </body>
 </html>
 <script type="text/javascript" src="js/lib/jquery-1.11.1.js"></script>
-	<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
