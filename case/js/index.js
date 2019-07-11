@@ -68,7 +68,9 @@
         }
     }
     $(".e-invoice .modify1").on('click', function() {
-         dianziClick() 
+         dianziClick();
+        $('.e-invoice .invoice-cancel').show()
+        $('.e-invoice .modify1').hide()
     });
 	$('.e-invoice .type-more').on('click',function() {
         
@@ -121,4 +123,79 @@
         eleForm.find("input[name=e_mobile]").val($('#normal_invoice_e_mobile').text());
         eleForm.find('input.error').removeClass("error");
         $('#invoiceBtnElectron_tips').html('');
+    });
+    //纸质发票
+    function zhiziClick() {
+        $(".paper-invoice .invoice-view1").hide();
+        $('.paper-invoice .invoice-modify1').show();
+        $(this).hide();
+        $('.paper-invoice .type-more').removeClass('none');
+        var domType = $('.paper-invoice .type-more');
+        for(var i = 0; i < domType.length; i++) {
+            $(domType[i]).data('show') ? $(domType[i]).addClass('none') : ''
+        };
+        
+    }
+   
+    $(".paper-invoice .modify1").on('click', function() {
+        zhiziClick();
+        $('.paper-invoice .invoice-cancel').show()
+        $('.paper-invoice .modify1').hide()
+
+    });
+    $('.paper-invoice .type-more').on('click',function() {
+        $('.paper-invoice .type-more').removeClass('none')
+        $(this).addClass('none')
+        if($(this).data('show')) {
+            if(!isInputValueZhizi) {
+                zhiziClick()
+                $('.paper-invoice .modify1').hide()
+            }else {
+                $(".paper-invoice .invoice-view1").slideDown(400);
+                $(".paper-invoice .invoice-modify1").slideUp(400);
+            }
+        }else {
+            if(isInputValueZhizi) {
+                $('.paper-invoice .modify1').show()
+            }
+            $(".paper-invoice .invoice-view1").slideUp(400);
+            $(".paper-invoice .invoice-modify1").slideUp(400);
+        }
+    })
+      $('.paper-invoice .e-invoice-tit p').on('click',function(){
+        $(".e-invoice .invoice-view1").hide();
+        $(".e-invoice .invoice-modify1").hide();
+        $(".e-invoice .e-invoice-tit .type-more").removeClass('none')
+        var domType = $(".e-invoice .e-invoice-tit .type-more")
+        for(var i = 0 ; i < domType.length; i++) {
+            !$(domType[i]).data('show') ? $(domType[i]).addClass('none') : ''
+        }
+        $(this).parent().children('span').children('.type-more').removeClass('none')
+        var domType2 = $(this).parent().children('span').children('.type-more') 
+        for(var j= 0; j< domType2.length; j++) {
+            $(domType2[j]).data('show') ? $(domType2[j]).addClass('none') : ''
+        }
+        if(!isInputValueZhizi) {
+            $(".paper-invoice .invoice-view1").slideUp(400);
+            $(".paper-invoice .invoice-modify1").slideDown(400);
+        }else {
+            $(".paper-invoice .invoice-view1").slideDown(400);
+            $(".paper-invoice .invoice-modify1").slideUp(400);
+        }
+    })
+
+    $(".paper-invoice .invoice-cancel").on('click', function() {
+        $(".paper-invoice .invoice-modify1").slideUp(400);
+        $(".paper-invoice .invoice-view1").slideDown(400);
+        $('.paper-invoice .modify1').show();
+
+        //取消编辑，input内的数据全还原
+        var paperForm = $('#invoiceForm');
+        paperForm.find("input[name=company_name]").val($('#company_name_2').text());
+        paperForm.find("input[name=tax_number]").val($('#tax_number_2').text());
+        paperForm.find("input[name=contact]").val($('#contact_2').text());
+        paperForm.find("input[name=mobile_phone]").val($('#normal_invoice_phone').text());
+        paperForm.find("input[name=invoice_address]").val($('#invoice_address_2').text());
+        paperForm.find('input.error').removeClass("error");
+        $('#invoiceBtn_tips').html('');
     });
