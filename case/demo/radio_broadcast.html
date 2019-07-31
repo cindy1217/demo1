@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			margin:0 auto;
+			width: 400px;
+			height: 30px;
+			background: red;
+			position: relative;
+			overflow: hidden;
+		}
+		.ul{
+			font-size: 0px;
+			line-height: 30px;
+			height: 30px;
+			position: absolute;
+			left: 0;
+			top:0;
+		}
+		.li{
+			display: inline-block;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div class="ul">
+			<div class="li">1111111</div>
+			<div class="li">1222222</div>
+			<div class="li">233334</div>
+			<div class="li">233335</div>
+			<div class="li">3333336</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+	console.log(innerHeight);
+	console.log(innerWidth);
+	console.log(outerHeight);
+	console.log(outerWidth);
+	function Brodadcast (dom, speed) {
+		var _this = this
+		this.dom = dom
+		this.leftVal = $(dom).parent()[0].offsetWidth
+		this.timer = null;
+		this.init = function() {
+			this.timerFun()	
+		}
+		$(dom).parent()[0].onmouseover = function() {
+			clearInterval(_this.timer);	
+		}
+		$(dom).parent()[0].onmouseout = function() {
+			_this.timerFun()
+		} 
+		this.timerFun = function() {
+			this.timer = setInterval(function() {
+				_this.leftVal--
+				_this.leftVal + dom.offsetWidth <= 0 ?_this.leftVal = $(dom).parent()[0].offsetWidth : $(dom).css({left:`${_this.leftVal}px`}) 
+			}, speed);
+		}
+	}
+	new Brodadcast($('.ul')[0], 60).init()
+</script>

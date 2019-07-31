@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		.box{
+			font-size: 0;
+			margin:0 auto;
+			width: 600px;
+			height: 600px;
+		}
+		.tab{
+			width: 80px;
+			height: 32px;
+			text-align: center;
+			line-height: 32px;
+		}
+		.tab, .tab_conent{
+			display: inline-block;
+			font-size: 14px;
+			box-sizing: border-box;
+			position: relative;
+			left:0;
+			top:0;
+		}
+		.son{
+			margin-top: 20px;
+			width:160px;
+			height: 200px;
+			overflow: hidden;
+			/*border: 1px solid red;*/
+		}
+		.cur{
+			background: pink;
+		}
+		.li{
+			height: 20px;
+			box-sizing: border-box;
+			border-bottom:1px solid #ddd;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<div>
+			<div class="tab cur">tab1</div>
+			<div class="tab">tab2</div>
+		</div>
+		<div class="son">
+			<div class="tab_conent cur">
+				<div class="li">1start</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1</div>
+				<div class="li">1end</div>
+			</div>
+			<div class="tab_conent" style="display: none;">
+				<div class="li">2start</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<!-- <div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div>
+				<div class="li">2</div> -->
+				<div class="li">2end</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script src="http://apps.bdimg.com/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+	$('.tab').on('click',function(){
+		$(this).addClass('cur').siblings().removeClass('cur')
+
+		$('.tab_conent').eq($(this).index()).show().addClass('cur').siblings().removeClass('cur').hide()
+	})
+	function InfiniteRolling(dom, speed) {
+		var _this = this
+		this.speed = speed
+		this.dom = dom 
+		this.MyMar =null;
+		this.topVal = 0;
+		this.topHeight = 0
+		this.init = function () {
+			this.computedHeight()
+		}
+		this.Marquee = function () {
+			this.topVal > this.dom.offsetHeight / 2 ? this.topVal = 0 : this.topVal++   
+	    	if(this.dom.offsetHeight/2 >= $(this.dom).parent()[0].offsetHeight) {
+	    		$(this.dom).css({'background':"red", transform:`translateY(${-this.topVal}px)`})
+	    	}
+		}
+		this.computedHeight = function() {
+			if($(this.dom).outerHeight() >= $(this.dom).parent()[0].offsetHeight) {
+				$(this.dom).append($(this.dom).children().clone().addClass('cloned'))
+				this.MyMar = setInterval(function(){
+					_this.Marquee()	
+				}, speed);
+				$(dom).parent()[0].onmouseover = function() {
+			    	clearInterval(_this.MyMar)
+				};
+				$(dom).parent()[0].onmouseout = function() {
+				   	_this.MyMar = setInterval(function(){
+				   		_this.Marquee()	
+				   	}, speed);
+				};	
+			}
+		}
+	}
+	for(var k = 0 ;k<$('.tab_conent').toArray().length;k++) {
+		new InfiniteRolling($('.tab_conent').toArray()[k], 40).init()	
+	}
+</script>

@@ -79,11 +79,15 @@
         if($(this).data('show')) {
             if(!isInputValueDianzi){
                 dianziClick();
+                $('.e-invoice .modify1').hide()
             }else {
                 $(".e-invoice .invoice-view1").slideDown(400);
                 $(".e-invoice .invoice-modify1").slideUp(400);    
             }
         }else {
+            if(isInputValueDianzi) {
+                $('.e-invoice .modify1').show()
+            }
             $(".e-invoice .invoice-view1").slideUp(400);
             $(".e-invoice .invoice-modify1").slideUp(400);
         }
