@@ -1,11 +1,11 @@
 	//加载进度计时器
-	// $(function(){
-	// 	var loading = '<div class="loading_box"><div class="box"></div><img src="images/loading.gif"></div>';
-	// 	$('body').append(loading);
-	// 	setTimeout(function(){
-	// 		$('.loading_box').fadeOut()
-	// 	},2000)
-	// })
+	$(function(){
+		var loading = '<div class="loading_box"><div class="box"></div><img src="../images/loading.gif"></div>';
+		$('body').append(loading);
+		setTimeout(function(){
+			$('.loading_box').fadeOut()
+		},2000)
+	})
 	//table切换
 	$('.nav li').hover(function(){
 		_this=$(this);

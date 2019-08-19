@@ -3,12 +3,6 @@
 <head>
 	<title></title>
 	<style type="text/css">
-		html,body{
-			height: 100%;
-		}
-		.loading_box{
-			background: #fff;
-		}
 		.box{
 			position: fixed;
 			left: 0;
@@ -35,9 +29,28 @@
 	</style>
 </head>
 <body>
-	<div class="loading_box">
+	<div class="loading_box" id="loading_box">
 		<div class="box"></div>
-		<img src="images/loading.gif">
+		<img src="../images/loading.gif">
 	</div>
+	<script type="text/javascript">
+		console.log(innerHeight);
+		console.log(innerWidth);
+		console.log(outerHeight);
+		console.log(outerWidth);
+		console.log("------");
+		console.log(screen.width);
+		console.log(screen.height);
+		console.log("------");
+		console.log(document.body.clientLeft);
+		console.log(document.body.clientTop); 
+		console.log("------");
+		console.log(document.body.offsetLeft);
+		console.log(document.body.offsetWidth);
+		console.log("------");
+		var loadbox=document.getElementById('loading_box');
+		console.log(loading_box.clientHeight);
+		console.log(loadbox.clientWidth);
+	</script>
 </body>
 </html>
