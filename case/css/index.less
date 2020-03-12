@@ -202,5 +202,84 @@ header{
 			}
 		}
 	}
+}
+//七日行情滚动切换
+.floating{
+	float: left;
+	width: 298px;
+	height: 428px;
+	overflow: hidden;
+	.tabList{
+		li{
+			float: left;
+			height: 38px;
+			line-height: 38px;
+			width: 148.5px;
+			text-align: center;
+			font-size: 14px;
+			cursor: pointer;
+			background: #f5f5f5;
+			border-left: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+			&:first-child{
+				border-left: 0;
+				border-right: 1px solid #ddd;
+			}
+			&.on{
+				border: 0;
+				background: #fff;
+			}
+		}
+	}
+	.floating-tab{
+		padding: 0 19px;
+	}
+	.tab-head{
+		table{
+			tr{
+				border-bottom: solid 1px #ddd;
+			}
+			th{
+				height: 40px;
+			}
+		}
+	}
+	.tab-slide{
+		margin-top: 9px;
+		height: 330px;
+		overflow: hidden;
+		.tbody-box{
+			height: 330px;
+			overflow: hidden;
+		}
+		table{
 
+			td{
+				text-align: center;
+				line-height: 30px;
+			}
+			.cut-1,.cut-2,.cut-3{
+				display: block;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+			}
+			.cut-1{
+				width: 80px;
+			}
+			.cut-2{
+				width: 110px;
+				color: #777;
+			}
+			.cut-3{
+				width: 65px;
+			}
+			a{
+				color: #333;
+				&:hover{
+					color: #317ee7;
+				}
+			}
+		}
+	}
 }

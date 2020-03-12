@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>七日涨幅榜</title>
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+	<link rel="stylesheet" type="text/css" href="../css/index.css">
+	<script type="text/javascript" src="../js/lib/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="../js/lib/dialog.js"></script>
+</head>
+<body>
+	<div class="floating border">
+		<div class="tabList">
+			<ul class="clearfix">
+				<li class="on">七日涨幅榜</li>
+				<li>七日跌幅榜</li>
+			</ul>
+		</div>
+		<div class="floating-tab">
+			<div class="tab-head">
+				<table>
+					<colgroup>
+						<col width="80">
+						<col width="115">
+						<col width="65">
+					</colgroup>
+					<thead>
+						<tr>
+							<th class="text-l">商品名称</th><th>当日均价</th><th>七日涨幅</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+			<div class="tab-slide">
+				<div class="tbody-box" id="tbodyscroll">
+					<table class="tbodyscroll">
+						<colgroup>
+							<col width="85">
+							<col width="110">
+							<col width="65">
+						</colgroup>
+						<tbody id="tbodychild">
+							<tr>
+								<td><a href="" class="cut-1 text-l">小瓶盖</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">五月</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">五月</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+						</tbody>
+						<tbody id="tbodychild02">
+                    	</tbody>
+					</table>
+				</div>
+				<div class="tbody-box none" id="tbodyscroll-2">
+					<table class="tbodyscroll">
+						<colgroup>
+							<col width="85">
+							<col width="110">
+							<col width="65">
+						</colgroup>
+						<tbody id="tbodychild-2">
+							<tr>
+								<td><a href="" class="cut-1 text-l">小瓶盖</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">五月</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">五月</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">可乐</a></td>
+								<td><span class="cut-2">￥4900.00/ton </span></td>
+								<td><sapn class="cut-3 co-red">14.29% ↑</span></td>
+							</tr>
+							<tr>
+								<td><a href="" class="cut-1 text-l">火锅</a></td>
+								<td><sapn class="cut-2">￥4900.00/ton </span></td>
+								<td><span class="cut-3 co-green">14.29% ↓</span></td>
+							</tr>
+						</tbody>
+						<tbody id="tbodychild02-2">
+                    	</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript">
+	$('.tabList li').on('click',function(){
+		$(this).addClass('on').siblings().removeClass('on');
+		$('.tab-slide .tbody-box').eq($(this).index()).show().siblings().hide()
+	})
+	function scrollTob(scrollId,scrollChildId,scrollChild2Id,tbodycChildId){
+		var speed = 60;
+		var scroll = document.getElementById(scrollId);
+        var scrollchild = document.getElementById(scrollChildId);
+        var scrollchild02 = document.getElementById(scrollChild2Id);
+		var scrolltr = $(tbodycChildId + ' tr');
+		if (scrolltr.length>=11) {
+			scrollchild02.innerHTML = scrollchild.innerHTML;
+		}
+		scroll.scrollTop = 0;
+		function Marquee(){
+			if (scroll.scrollTop>=scrollchild.offsetHeight) {
+				scroll.scrollTop = 0;
+			}else{
+				scroll.scrollTop++;
+			}
+		}
+		var MyMar = window.setInterval(Marquee,speed)
+		scroll.onmouseover = function(){
+			clearInterval(MyMar)
+		}
+		scroll.onmouseout = function(){
+			MyMar = setInterval(Marquee,speed)
+		}
+	}
+	scrollTob('tbodyscroll','tbodychild','tbodychild02','#tbodychild')
+	scrollTob('tbodyscroll-2','tbodychild-2','tbodychild02-2','#tbodychild-2')
+</script>
