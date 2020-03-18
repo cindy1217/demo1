@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/form-style.css">
+	<link rel="stylesheet" type="text/css" href="../css/base.css">
+</head>
+<body>
+
+	<div class="info clearfix">
+	<form id="inquiryForm" action="#" class="form-info">
+		<div class="add-inquiry">
+	        <h3 class="title">询盘信息</h3>
+	        <div class="add-inquiry-form">
+	            <form action="" id="addInquiryForm">
+	                <dl class="clearfix">
+	                    <dt><label for="">产品名称</label></dt>
+	                    <dd>
+	                        <input type="text" name="productName" placeholder="请输入产品名称" maxlength="35" id="" class="item-style">
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">采购数量</label></dt>
+	                    <dd>
+	                        <input type="text" name="goodsCount" placeholder="请输入采购数量" id="" class="item-style item-m">
+	                        <div class="select-item item-s mg-l6">
+	                            <select name="unitName" id="unitName">
+	                                <option value="0">选择单位</option>
+	                                <option value="1">单位02</option>
+	                                <option value="1">单位03</option>
+	                                <option value="1">单位04</option>
+	                            </select>
+	                        </div>
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">商品纯度</label></dt>
+	                    <dd>
+	                        <input type="text" name="goodsPurity" placeholder="请输入商品的纯度要求" id="" class="item-style">
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">联系人</label></dt>
+	                    <dd>
+	                        <input type="text" name="contactPerson" placeholder="请输入联系人姓名" id="" class="item-style">
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">手机号码</label></dt>
+	                    <dd>
+	                        <input type="text" name="mobilePhone" placeholder="请输入联系人手机" id="" class="item-style">
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">邮箱地址</label></dt>
+	                    <dd>
+	                        <input type="text" name="contactEmail" placeholder="请输入联系人邮箱" id="" class="item-style">
+	                        <span class="icon-error"></span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix gap-group">
+	                    <dt>&nbsp;</dt>
+	                    <dd>
+	                        <label for="checkPublice">
+	                            <input type="checkbox" name="" id="checkPublice" checked="true">
+	                            <em>愿意公开联系方式给供应商</em>
+	                        </label>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">收货地址</label></dt>
+	                    <dd>
+	                        <div class="select-item item-s">
+	                            <select name="country" id="country">
+	                                <option value="0">选择国家</option>
+	                                <option value="1">美国</option>
+	                                <option value="1">法国</option>
+	                                <option value="1">德国</option>
+	                                <option value="1">澳大利亚</option>
+	                            </select>
+	                        </div>
+	                        <div class="select-item item-s mg-l6">
+	                            <select name="province" id="province">
+	                                <option value="0">选择省份</option>
+	                                <option value="1">加州</option>
+	                                <option value="1">华盛顿</option>
+	                                <option value="1">巴黎</option>
+	                            </select>
+	                        </div>
+	                        <div class="select-item item-s mg-l6">
+	                            <select name="city" id="city">
+	                                <option value="0">选择城市</option>
+	                                <option value="1">长滩岛</option>
+	                                <option value="1">首尔</option>
+	                                <option value="1">纽约</option>
+	                            </select>
+	                        </div>
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt>&nbsp;</dt>
+	                    <dd>
+	                        <input type="text" name="address" id="" placeholder="请输入详细的收货地址" class="item-style">
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">有效期</label></dt>
+	                    <dd>
+	                        <div class="select-item">
+	                            <select name="deadline" id="deadline" class="item-l">
+	                                <option value="0">选择询盘的有效期</option>
+	                                <option value="1">单位02</option>
+	                                <option value="1">单位03</option>
+	                                <option value="1">单位04</option>
+	                            </select>
+	                        </div>
+	                        <span class="icon-error">*</span>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">询盘范围</label></dt>
+	                    <dd>
+	                        <label for="part01" class="item-radio">
+	                            <input type="radio" checked="checked" name="part" id="part01">
+	                            <em>仅向该供应商</em>
+	                        </label>
+	                        <label for="part02" class="item-radio">
+	                            <input type="radio" name="part" id="part02">
+	                            <em>所有渠道</em>
+	                        </label>
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt><label for="">包装要求</label></dt>
+	                    <dd>
+	                        <input type="text" name="packClaim" placeholder="请输入对于化合物的包装规格要求" id=""
+	                               class="item-style">
+	                    </dd>
+	                </dl>
+	                <dl class="clearfix">
+	                    <dt>&nbsp;</dt>
+	                    <dd>
+	                        <input type="submit" class="submit-btn" value="立即发布">
+	                    </dd>
+	                </dl>
+	            </form>
+	        </div>
+	    </div>
+	</form>
+	<div class="heart">
+		<div class="p-bottom">
+			<a href="javascript:void(0);" class="follow"><i class="icon-follow"></i><span data-folnum="366">关注（366）</span>
+			<p class="fol-cancel">点击取消关注</p></a>
+			<div class="jiathis_style">
+				<a href="http://www.jiathis.com/share" class="jiathis" target="_blank"><i class="icon-share"></i>分享</a>
+			</div>
+			<script type="text/javascript" src="http://v3.jiathis.com/code_mini/jia.js" charset="utf-8"></script>
+		</div>
+		<div class="p-bottom">
+		    <a href="javascript:void(0);" class="follow"><i class="icon-follow"></i><span data-folnum="366">关注（366）</span>
+		    <p class="fol-cancel">点击取消关注</p></a>
+	    </div>
+	</div>
+	</div>
+	<div class="info">
+		<div class="goods-nav">
+	        <a href="" class="active">全部</a>
+	        <a href="">香精香料</a>
+	        <a href="">大宗无机</a>
+	        <a href="">胶黏剂</a>
+	        <a href="">香精香料</a>
+	        <a href="">大宗无机</a>
+	        <a href="">胶黏剂</a><a href="">香精香料</a>
+	        <a href="">大宗无机</a>
+	        <a href="">胶黏剂</a><a href="">香精香料</a>
+	        <a href="">大宗无机</a>
+	        <a href="">胶黏剂</a><a href="">香精香料</a>
+	        <a href="">大宗无机</a>
+	        <a href="">胶黏剂</a>
+	        <a href="javascript:void(0);" class="type-more fold">更多</a>
+	    </div>
+	    <div class="error-message">
+	    	<dl>
+	    		<dt>
+	    			<img src="../images/error-m.png">
+	    		</dt>
+	    		<dd>
+	    			<p> Sorry, the supply information for {CAS No. xxx-xx-x| Product XXX} is NOT available for now. Please submit a quote request to MOLBASE and customer service will help locate your product.</p> 
+	    		</dd>
+	    	</dl>
+	    	<input type="submit" name="" class="error-but" value="Inquiry&nbsp;Now">
+	    </div>
+    </div>
+    <script type="text/javascript" src="../js/lib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="../js/form.js"></script>
+   
+</body>
+</html>
