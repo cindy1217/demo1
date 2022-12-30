@@ -5,6 +5,6 @@
   "license": "MIT",
   "dependencies": {
     "tty-browserify": "^0.0.0",
-    "webpack": "^4.16.5"
+    "webpack": "^5.75.0"
   }
 }
